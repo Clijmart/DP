@@ -1,10 +1,10 @@
-package P2.Dao;
+package P3.Dao;
 
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.sql.Date;
 
-import P2.Domain.Reiziger;
+import P3.Domain.Reiziger;
 
 public interface ReizigerDao {
 	public ArrayList<Reiziger> findAll() throws SQLException;

@@ -1,4 +1,4 @@
-package P2.Domain;
+package P3.Domain;
 
 import java.sql.Date;
 import java.util.ArrayList;
@@ -10,6 +10,7 @@ public class Chipkaart {
 	private int klasse;
 	private double saldo;
 	private Reiziger eigenaar;
+	private ArrayList<Product> producten;
 	
 	public Chipkaart(int kaartNummer, Date geldigTot, int klasse, double saldo) {
 		this.kaartNummer = kaartNummer;

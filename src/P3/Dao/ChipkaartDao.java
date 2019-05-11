@@ -1,10 +1,10 @@
-package P2.Dao;
+package P3.Dao;
 
 import java.sql.SQLException;
 import java.util.ArrayList;
 
-import P2.Domain.Chipkaart;
-import P2.Domain.Reiziger;
+import P3.Domain.Chipkaart;
+import P3.Domain.Reiziger;
 
 public interface ChipkaartDao {
 	public ArrayList<Chipkaart> findAll() throws SQLException;

@@ -1,14 +1,14 @@
-package P2.Dao;
+package P3.Dao;
 
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
-import P2.Domain.Chipkaart;
-import P2.Domain.Reiziger;
-import P2.Dao.ReizigerDao;
-import P2.Dao.ReizigerOracleDaoImpl;
+import P3.Domain.Chipkaart;
+import P3.Domain.Reiziger;
+import P3.Dao.ReizigerDao;
+import P3.Dao.ReizigerOracleDaoImpl;
 
 public class ChipkaartOracleDaoImpl extends OracleBaseDao implements ChipkaartDao {
 	
