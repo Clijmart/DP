@@ -13,6 +13,7 @@ import P3.Dao.ReizigerOracleDaoImpl;
 public class ChipkaartOracleDaoImpl extends OracleBaseDao implements ChipkaartDao {
 	
 	private ReizigerDao rdao = new ReizigerOracleDaoImpl();
+	private ProductDao pdao = new ProductOracleDaoImpl();
 	
 	public ChipkaartOracleDaoImpl() throws SQLException {
 		super();
@@ -31,6 +32,7 @@ public class ChipkaartOracleDaoImpl extends OracleBaseDao implements ChipkaartDa
 			c.setKlasse(rs.getInt("klasse"));
 			c.setSaldo(rs.getDouble("saldo"));
 			c.setEigenaar(rdao.findById(rs.getInt("reizigerid")));
+			c.setProducten(pdao.findByChipkaart(c));
 			chipkaarten.add(c);
 		}
 		rs.close();
@@ -51,6 +53,7 @@ public class ChipkaartOracleDaoImpl extends OracleBaseDao implements ChipkaartDa
 			c.setKlasse(rs.getInt("klasse"));
 			c.setSaldo(rs.getDouble("saldo"));
 			c.setEigenaar(rdao.findById(rs.getInt("reizigerid")));
+			c.setProducten(pdao.findByChipkaart(c));
 		}
 		
 		rs.close();
@@ -72,6 +75,7 @@ public class ChipkaartOracleDaoImpl extends OracleBaseDao implements ChipkaartDa
 			c.setKlasse(rs.getInt("klasse"));
 			c.setSaldo(rs.getDouble("saldo"));
 			c.setEigenaar(reiziger);
+			c.setProducten(pdao.findByChipkaart(c));
 			chipkaarten.add(c);
 		}
 		rs.close();

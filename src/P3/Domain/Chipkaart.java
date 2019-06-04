@@ -62,7 +62,15 @@ public class Chipkaart {
 		this.eigenaar = eigenaar;
 	}
 	
+	public ArrayList<Product> getProducten() {
+		return producten;
+	}
+	
+	public void setProducten(ArrayList<Product> producten) {
+		this.producten = producten;
+	}
+	
 	public String toString() {
-		return "\nChipkaart: " + getKaartNummer() + "\nGeldig Tot: " + getGeldigTot() + "\nKlasse: " + getKlasse() + "\nSaldo: " + getSaldo() + "\nEigenaar: " + getEigenaar();
+		return "\nChipkaart: " + getKaartNummer() + "\nGeldig Tot: " + getGeldigTot() + "\nKlasse: " + getKlasse() + "\nSaldo: " + getSaldo() + "\nEigenaar: " + getEigenaar() + "\nProducten: " + getProducten().toString();
 	}
 }

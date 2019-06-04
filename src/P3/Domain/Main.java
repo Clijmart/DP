@@ -8,11 +8,14 @@ import P3.Dao.ReizigerOracleDaoImpl;
 import P3.Dao.ReizigerDao;
 import P3.Dao.ChipkaartOracleDaoImpl;
 import P3.Dao.ChipkaartDao;
+import P3.Dao.ProductOracleDaoImpl;
+import P3.Dao.ProductDao;
 
 public class Main {
 	public static void main(String[] args) throws SQLException {
 		ReizigerDao rdao = new ReizigerOracleDaoImpl();
 		ChipkaartDao cdao = new ChipkaartOracleDaoImpl();
+		ProductDao pdao = new ProductOracleDaoImpl();
 		
 		
 		/*
@@ -41,25 +44,12 @@ public class Main {
 		
 		//System.out.println(cdao.findAll());
 		
+		//Chipkaart c4 = cdao.findByKaartNummer(35283);
 		
-		Reiziger r3 = rdao.findById(4);
+		//System.out.println(pdao.findByChipkaart(c4));
 		
-		System.out.println(cdao.findByReiziger(r3));
+		System.out.println(pdao.findByChipkaart(cdao.findByKaartNummer(35283)));
 		
-		Chipkaart c1 = new Chipkaart();
-		c1.setKaartNummer(69420);
-		c1.setGeldigTot(Date.valueOf("2004-02-06"));
-		c1.setKlasse(2);
-		c1.setSaldo(6.66);
-		c1.setEigenaar(r3);
-		
-		cdao.save(c1, r3);
-		
-		System.out.println(cdao.findAll());
-		
-		c1.setKlasse(1);
-		
-		cdao.update(c1);
 		
 		
 	}
